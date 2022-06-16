@@ -1,6 +1,7 @@
 let transactions = [];
 let myChart;
 
+//get all dd transactions and display them
 fetch("/api/transaction")
   .then(response => {
     return response.json();
