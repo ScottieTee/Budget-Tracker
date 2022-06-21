@@ -8,10 +8,9 @@ const FILES_TO_CACHE = [
     "./js/index.js"
 ];
 
-self.addEventListener("install", function (e){
+self.addEventListener("install", function (e) {
     e.waitUnitl(
-        caches.open(CACHE_NAME).then(function (cache)
-    {
+        caches.open(CACHE_NAME).then(function (cache){
         console.log("installing cache : " + CACHE_NAME);
         return cache.addAll(FILES_TO_CACHE);
     })
